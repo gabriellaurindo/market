@@ -10,7 +10,7 @@ app.set("view engine", "ejs")
 app.use('/public', express.static('public'));
 
 //Config BodyParser
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 //Iniciando banco de dados
