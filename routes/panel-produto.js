@@ -19,8 +19,16 @@ router.post('/panel-produto', (req,res) =>{
 })
 
 router.post('/panel-produtomod', (req,res)=>{
-    const {nome, desc, valor, quantidade, link, id} = req.body
-    prod.updateOne({ _id:id}, { $set: {nome,desc,valor,quantidade,link}})
+    const {nome, desc, quantidade, link, id, valor} = req.body
+    console.log(nome, desc, quantidade, link, id, valor)
+    prod.findByIdAndUpdate(id, {nome, desc, valor, quantidade, link}, function (err, docs) {
+        if (err){
+            console.log(err)
+        }
+        else{
+            console.log("Updated User : ",docs);
+        }
+    })
 })
 
 //Exportando rota  
