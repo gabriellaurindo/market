@@ -22,6 +22,7 @@ const panel = require('../routes/panel')
 const panelCdMercado = require('../routes/panel-cdMercado')
 const panelCdProduto = require('../routes/panel-cdProduto')
 const panelMercado   = require('../routes/panel-mercado')
+const panelProduto   = require('../routes/panel-produto')
 
 //Usando rotas
 app.use('/',index)
@@ -29,6 +30,7 @@ app.use('/',panel)
 app.use('/',panelCdMercado)
 app.use('/',panelCdProduto)
 app.use('/',panelMercado)
+app.use('/',panelProduto)
 
 //Exportando constante app
 module.exports = app

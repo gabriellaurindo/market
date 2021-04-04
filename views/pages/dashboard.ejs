@@ -24,16 +24,17 @@
 </div>
 
 <div style="margin-left:50%">
-<% for(mercado of mercados) { %>
-  <form method="POST" action="/panel-mercado">   
+<% for(mercado of mercados) { %>  
     <div class="w3-container">
+      <form method="POST" action="/panel-mercado"> 
       <button name="btmercado" type = "submit">
         <a href="#"><h2><%= mercado.nome %></h2></a>
         <p><%= mercado.desc %></p>
         <input type="hidden" name="id" value = <%= mercado._id %> >
       </button>
+    </form>
     </div>
-  </form>
+  
 <% } %>  
 
 </div>

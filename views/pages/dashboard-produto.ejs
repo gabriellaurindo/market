@@ -19,7 +19,7 @@
   <img src="../../public/img/logo.png" alt="Snow" style="width:50%">
   <a href="/panel" class="w3-bar-item w3-button">Home</a>
   <a href="#" class="w3-bar-item w3-button w3-red"><%= mercado.nome%></a>
-  <a href="/panel-cdmercado" class="w3-bar-item w3-button">Cadastrar Mercado<span class="w3-tag w3-red w3-right w3-margin-right">8</span></a>
+  <a href="/panel-cdmercado" class="w3-bar-item w3-button">Cadastrar Mercado</a>
   <form method="GET" action="/panel-cdproduto"><input type="hidden" name="id" value = <%= mercado._id%> /><button type="submit" class="w3-bar-item w3-button">Cadastrar Produto</button></form>
   <a href="#" class="w3-bar-item w3-button">Sair</a>
 
@@ -27,19 +27,20 @@
 
 <div style="margin-left:50%">
 <h4><%= mercado.nome%></h4>
-<% for(produto of produtos) { %>
-  <div class="w3-container">
-    <form method="POST" action="/panel-produto"> 
-      <a href="#"><h2><%= produto.nome %></h2></a>
-      <img style="width:50%" src= "../../public/img/<%= produto.link %>">
-      <p><%= produto.desc %></p>
-      <p><%= produto.valor %></p>
-      <p><%= produto.quantidade %></p>
-      <input type="hidden" name="id" value = <%= produto._id %> >
-      <button name="btmercado" type = "submit">Modificar</button>
-    </form>   
-  </div>
-<% } %>  
+<form method="POST" action="/panel-produtomod">
+  <label>Nome:</label><br>
+  <input type="text" id="nome" name="nome" value=<%=produto.nome%>><br>
+  <label for="lname">Descrição:</label><br>
+  <input type="text" id="desc" name="desc" value="<%=produto.desc%>"><br><br>
+  <label>Valor:</label><br>
+  <input type="text" id="valor" name="valor" value=<%=produto.valor%>><br>
+  <label for="lname">Quantidade:</label><br>
+  <input type="text" id="quantidade" name="quantidade" value=<%=produto.quantidade%>><br><br>
+  <label for="lname">Nome da imagem:</label><br>
+  <input type="text" id="link" name="link"value=<%=produto.link%>><br><br>
+  <input type="hidden" name="id" value = <%=produto._id%>>
+  <button class="btcad" type="submit" name="btcadastro">Cadastro</button>
+</form> 
 
 </div>
       
@@ -50,10 +51,3 @@
 
 </body>
 </html>
-
-
-
- 
-   
-    
-
