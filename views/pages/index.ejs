@@ -164,8 +164,9 @@
         <div class="cat-news">
             <div class="container">
                 <div class="row">
+                    <% for(mercado of mercados) { %>
                     <div class="col-md-6">
-                        <h2>Atacadão</h2>
+                        <h2><%= mercado.nome %></h2>
                         <div class="row cn-slider">
                             <div class="col-md-6">
                                 <div class="cn-img">
@@ -177,27 +178,6 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="../../public/img/news-350x223-2.png" />
-                                    <div class="cn-title">
-                                        <a href="">Arroz Prato Fino tipo 1</br> 2kg <span style="color:#f2d028">R$17,98</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="cn-img">
-                                    <img src="../../public/img/news-350x223-3.jpg" />
-                                    <div class="cn-title">
-                                        <a href="">Foto 3</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Assaí</h2>
-                        <div class="row cn-slider">
-                            <div class="col-md-6">
-                                <div class="cn-img">
                                     <img src="../../public/img/news-350x223-1.png" />
                                     <div class="cn-title">
                                         <a href="">Arroz Prato Fino tipo 1</br> 2kg <span style="color:#f2d028">R$17,98</span></a>
@@ -206,28 +186,21 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="../../public/img/news-350x223-2.png" />
+                                    <img src="../../public/img/news-350x223-1.png" />
                                     <div class="cn-title">
                                         <a href="">Arroz Prato Fino tipo 1</br> 2kg <span style="color:#f2d028">R$17,98</span></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="cn-img">
-                                    <img src="../../public/img/news-350x223-1.jpg" />
-                                    <div class="cn-title">
-                                        <a href="">foto 3</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                    <% } %> 
                 </div>
             </div>
         </div>
         <!-- Category News End-->
 
-        <!-- Category News Start-->
+        <!-- Category News Start--
         <div class="cat-news">
             <div class="container">
                 <div class="row">
@@ -292,6 +265,7 @@
                 </div>
             </div>
         </div>
+    -->
         <!-- Category News End-->
         
         <!-- Tab News Start-->

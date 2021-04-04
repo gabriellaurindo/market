@@ -18,9 +18,17 @@ require("../config/database")
 
 //Importando rotas
 const index = require('../routes/index')
+const panel = require('../routes/panel')
+const panelCdMercado = require('../routes/panel-cdMercado')
+const panelCdProduto = require('../routes/panel-cdProduto')
+const panelMercado   = require('../routes/panel-mercado')
 
 //Usando rotas
 app.use('/',index)
+app.use('/',panel)
+app.use('/',panelCdMercado)
+app.use('/',panelCdProduto)
+app.use('/',panelMercado)
 
 //Exportando constante app
 module.exports = app

@@ -5,16 +5,21 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 //Criando e Configurando um Novo Schema
-const imgSchema = new Schema({
-    link:{
+const mercSchema = new Schema({
+    nome:{
+        type:String,
+        require:true
+    },
+    desc:{
         type:String,
         require:true
     }
+
 })
 
 //Definindo Modelo de Imagem Baseado no Schema
-const img = mongoose.model("img", imgSchema)
+const merc = mongoose.model("merc", mercSchema)
 
 //Exportando Módulo
-module.exports = img
+module.exports = merc
 
